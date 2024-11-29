@@ -202,7 +202,32 @@
                  class="framework-image" 
                  style="max-width: 100%; height: auto;">
           </div>
+          <p>
+            In the EXCON framework, t-th timestamp of MVTS instance is processed by the t-th LSTM cell within temporal feature embedding module. 
+            In the last timestamp τ, the output is projected into d-dimensional space. 
+          </p>
           <!--/ Framework Section -->
+
+        <!-- Loss Section -->
+          <h3 class="title is-4">Loss Function</h3>
+          <div class="content has-text-justified">
+            <ul>
+              <li>Goal: to enforce that the embeddings learned by the model are aligned with the extremes of each class in a supervised setting. </li>
+              <li>Method: for each embedding vector, we compute the mean squared error (MSE) loss relative to the corresponding class extreme.</li>
+              <li><Facilitate effective contrastive learning</li>
+              <li>Data instances belonging to the same class are embedded closer to their respective class extremes in the new feature space, thereby minimizing intra-class variability</li>
+            </ul>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/loss.pdf" 
+                 alt="Loss Image" 
+                 class="loss-image" 
+                 style="max-width: 100%; height: auto;">
+          </div>
+          <p>
+            C is the number of classes, |Cc| is the number of Cc class instances, d is the dimension of embedding vectors, eCc[i] is the i-th entry of m-th embedding vector, ECc[i] is the i-th entry of Cc class extreme.
+          </p>
+          <!--/ Loss Section -->
 
       </div>
     </div>
