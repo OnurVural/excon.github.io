@@ -214,7 +214,6 @@
             <ul>
               <li>Goal: to enforce that the embeddings learned by the model are aligned with the extremes of each class in a supervised setting. </li>
               <li>Method: for each embedding vector, we compute the mean squared error (MSE) loss relative to the corresponding class extreme.</li>
-              <li><Facilitate effective contrastive learning</li>
               <li>Data instances belonging to the same class are embedded closer to their respective class extremes in the new feature space, thereby minimizing intra-class variability</li>
             </ul>
           </div>
@@ -245,50 +244,57 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
-        
+
+        <!-- First Row: Two Figures Side by Side -->
+        <div class="columns is-centered">
+          <!-- First Figure -->
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <img src="./static/images/tsne_before_after.pdf" 
+                   alt="Results Graph" 
+                   class="results-image" 
+                   style="max-width: 100%; height: auto;">
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                t-SNE visualization of Segment 2 as test data: raw format and after obtaining the embeddings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Second Figure -->
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <img src="./static/images/performance_excon_baselines.pdf" 
+                   alt="Results Graph" 
+                   class="results-image" 
+                   style="max-width: 100%; height: auto;">
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                For solar flare prediction tasks, EXCON shows strong performance in three metrics, outperforming other models, 
+                while in other metrics, it produced highly competitive results against the state-of-the-art approaches in solar flare research.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Row: Another Figure -->
         <div class="content has-text-centered">
-          <img src="./static/images/tsne_before_after.pdf" 
-               alt="Results Graph" 
-               class="results-image" 
-               style="max-width: 100%; height: auto;">
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            t-SNE visualization of Segment 2 as test data: raw format and after obtaining the embeddings.
-          </p>
-        </div>
-
-        <div class="content has-text-centered">
-          <img src="./static/images/performance_excon_baselines.pdf" 
-               alt="Results Graph" 
-               class="results-image" 
-               style="max-width: 100%; height: auto;">
-        </div>
-
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            For solar flare prediction tasks, EXCON shows strong performance in three metrics, outperforming other models, 
-            while in other metrics, it produced highly competitive results against the state-of-the-art approaches in solar flare research..
-          </p>
-        </div>
-
-      <div class="content has-text-centered">
           <img src="./static/images/roc_auc_comparison.pdf" 
                alt="Results2 Graph" 
                class="results2-image" 
                style="max-width: 100%; height: auto;">
-        </div>
-
         </div>
         <div class="content has-text-justified">
           <p>
             Evaluation of EXCON across eight different UEA benchmark datasets. 
             These datasets included univariate, multivariate configurations and binary and multiclass classification tasks. 
             Our results show that EXCON demonstrates competitive performance across a wide range of time series classification tasks. 
-            EXCON achieves the best performance in four datasets, both binary and multiclass, indicating its robustness and versatility. 
-
+            EXCON achieves the best performance in four datasets, both binary and multiclass, indicating its robustness and versatility.
+          </p>
         </div>
+
       </div>
     </div>
     <!--/ Results Section -->
