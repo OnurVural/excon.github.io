@@ -154,12 +154,12 @@
         <h2 class="title is-3">Methodology</h2>
 
         <!-- Extracting. -->
-        <h3 class="title is-4">Extracting Dynamical Time Series Features</h3>
+        <h3 class="title is-4">Extraction of Dynamical Features</h3>
         <div class="content has-text-justified">
-          <p>
-            We extract catch22 features for each univariate time series in MVTS instances to have a low dimensional summary to represent the diverse and interpretable characteristics. 
-            Accordingly, for each MVTS data instance, we extract a fixed-dimensional multi-catch22 vector of size 22N.
-          </p>
+          <ul>
+            <li>Goal: to compress MVTS data instances into a vector representation</li>
+            <li>Method: catch22 feature extraction method</li>
+          </ul>
         </div>
         <div class="content has-text-centered">
             <img src="./static/images/c22_extraction_contrex.pdf" 
@@ -172,14 +172,14 @@
         <!-- Obtaining. -->
         <h3 class="title is-4">Obtaining Contrastive Extremes</h3>
         <div class="content has-text-justified">
-          <p>
-            We obtain two extreme points as overarching representations for positive and negative classes to enhance the contrastive power, 
-            effectively drawing positive data points closer to the positive extreme and negative data points closer to the negative extreme.
-            Positive and negative extremes EP and EN are selected as multi-catch22 vectors that yield the complete linkage, representing the data points that yield the greatest distance between clusters.
-          </p>
+          <ul>
+            <li>Goal: to identify extreme instances to serve as distinctive representations for each class</li>
+            <li>Maximize inter-class separation</li>
+            <li>Method:  multi-catch22 vector that yields the complete linkage</li>
+          </ul>
         </div>
         <div class="content has-text-centered">
-            <img src="./static/images/Extreme_point_extraction_contrex.pdf" 
+            <img src="./static/images/Extreme_point.pdf" 
                  alt="Extreme Image" 
                  class="extreme-image" 
                  style="max-width: 100%; height: auto;">
@@ -189,14 +189,15 @@
         <!-- Framework Section -->
           <h3 class="title is-4">Framework</h3>
           <div class="content has-text-justified">
-            <p>
-              CONTREX is composed of a sequence representation embedding module to derive fixed-dimensional embeddings from MVTS data points, 
-              and a downstream classifier that utilizes the representation embeddings for binary prediction. 
-              Our contrastive reconstruction loss function guides the training of our sequence representation embedding module such that it will learn similar representations to the extremes in a supervised setting.
-            </p>
+            <ul>
+              <li>Goal: learning meaningful embeddings from MVTS data instances</li>
+              <li>Method: two integrated phases that function in an end-to-end framework.</li>
+              <li>Phase 1: learning embeddings from MVTS data instances. </li>
+              <li>Phase 2: utilizing embeddings to perform the classification task</li>
+            </ul>
           </div>
           <div class="content has-text-centered">
-            <img src="./static/images/framework_v9.pdf" 
+            <img src="./static/images/framework_v9_CLRULT.pdf" 
                  alt="Framework Image" 
                  class="framework-image" 
                  style="max-width: 100%; height: auto;">
