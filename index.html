@@ -245,23 +245,21 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
 
-        <!-- First Row: Two Figures Side by Side -->
-        <div class="columns is-centered">
-          <!-- First Figure -->
-          <div class="column is-half">
-            <div class="content has-text-centered">
-              <img src="./static/images/tsne_before_after.pdf" 
-                   alt="Results Graph" 
-                   class="results-image" 
-                   style="max-width: 100%; height: auto;">
-            </div>
-            <div class="content has-text-justified">
-              <p>
-                t-SNE visualization of Segment 2 as test data: raw format and after obtaining the embeddings.
-              </p>
-            </div>
-          </div>
+        <!-- First Row: Single Figure with Description -->
+        <div class="content has-text-centered">
+          <img src="./static/images/tsne_before_after.pdf" 
+               alt="Results Graph" 
+               class="results-image" 
+               style="max-width: 100%; height: auto;">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            t-SNE visualization of Segment 2 as test data: raw format and after obtaining the embeddings.
+          </p>
+        </div>
 
+        <!-- Second Row: Two Figures Side by Side -->
+        <div class="columns is-centered">
           <!-- Second Figure -->
           <div class="column is-half">
             <div class="content has-text-centered">
@@ -277,22 +275,24 @@
               </p>
             </div>
           </div>
-        </div>
 
-        <!-- Second Row: Another Figure -->
-        <div class="content has-text-centered">
-          <img src="./static/images/roc_auc_comparison.pdf" 
-               alt="Results2 Graph" 
-               class="results2-image" 
-               style="max-width: 100%; height: auto;">
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            Evaluation of EXCON across eight different UEA benchmark datasets. 
-            These datasets included univariate, multivariate configurations and binary and multiclass classification tasks. 
-            Our results show that EXCON demonstrates competitive performance across a wide range of time series classification tasks. 
-            EXCON achieves the best performance in four datasets, both binary and multiclass, indicating its robustness and versatility.
-          </p>
+          <!-- Third Figure -->
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <img src="./static/images/roc_auc_comparison.pdf" 
+                   alt="Results2 Graph" 
+                   class="results2-image" 
+                   style="max-width: 100%; height: auto;">
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Evaluation of EXCON across eight different UEA benchmark datasets. 
+                These datasets included univariate, multivariate configurations and binary and multiclass classification tasks. 
+                Our results show that EXCON demonstrates competitive performance across a wide range of time series classification tasks. 
+                EXCON achieves the best performance in four datasets, both binary and multiclass, indicating its robustness and versatility.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -301,6 +301,7 @@
 
   </div>
 </section>
+
 
 
 
