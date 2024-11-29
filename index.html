@@ -246,31 +246,48 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
         
-        <div class="content has-text-justified">
-          <p>
-            t-SNE visualization of extracted embeddings suggests that our contrastive learning model effectively separates P and N classes.  
-          </p>
-        </div>
-
         <div class="content has-text-centered">
-          <img src="./static/images/tsne2plot.pdf" 
+          <img src="./static/images/tsne_before_after.pdf" 
                alt="Results Graph" 
                class="results-image" 
                style="max-width: 100%; height: auto;">
         </div>
         <div class="content has-text-justified">
           <p>
-            The results demonstrate the effectiveness of the proposed framework in predicting solar flares.  
-            We compare performance of CONTREX against following baselines from current solar flare research: Vector MVTS (VMVTS), 
-            Vector of last timestamp (LTV), Long-short term memory (LSTM), Random convolutional kernel transform (ROCKET).
+            t-SNE visualization of Segment 2 as test data: raw format and after obtaining the embeddings.
           </p>
         </div>
 
         <div class="content has-text-centered">
-          <img src="./static/images/performance_comparison_enhanced2.pdf" 
+          <img src="./static/images/performance_excon_baselines.pdf" 
                alt="Results Graph" 
                class="results-image" 
                style="max-width: 100%; height: auto;">
+        </div>
+
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            For solar flare prediction tasks, EXCON shows strong performance in three metrics, outperforming other models, 
+            while in other metrics, it produced highly competitive results against the state-of-the-art approaches in solar flare research..
+          </p>
+        </div>
+
+      <div class="content has-text-centered">
+          <img src="./static/images/roc_auc_comparison.pdf" 
+               alt="Results2 Graph" 
+               class="results2-image" 
+               style="max-width: 100%; height: auto;">
+        </div>
+
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Evaluation of EXCON across eight different UEA benchmark datasets. 
+            These datasets included univariate, multivariate configurations and binary and multiclass classification tasks. 
+            Our results show that EXCON demonstrates competitive performance across a wide range of time series classification tasks. 
+            EXCON achieves the best performance in four datasets, both binary and multiclass, indicating its robustness and versatility. 
+
         </div>
       </div>
     </div>
